@@ -1,0 +1,22 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["react", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "prettier",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
+  ],
+  "rules": {
+    "prettier/prettier": 0,
+    "no-shadow": 0,
+    "react/prop-types": 0,
+    "no-console": 0,
+    "func-names": 0,
+  },
+}
