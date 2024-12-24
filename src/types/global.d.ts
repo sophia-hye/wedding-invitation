@@ -1,19 +1,30 @@
-type ColorType = 'Default' | 'Cream' | 'Tiffany' | 'Charcoal';
+type Color = 'Default' | 'Cream' | 'Tiffany' | 'Charcoal';
+type FontSize = 'F48' | 'F32' | 'F24' | 'F18';
+type TextTransform = 'none' | 'capitalize' | 'uppercase' | 'lowercase';
+type BoxShape = 'rect' | 'roundRect' | 'circle';
 
-type HeaderType = 'H1' | 'H2' | 'H3' | 'H4';
-type SizeType = 'F48' | 'F32' | 'F24' | 'F18';
-
-type TextTransformType = 'none' | 'capitalize' | 'uppercase' | 'lowercase';
-
-type BoxShapeType = 'rect' | 'roundRect' | 'circle';
-
-type GridTextInfoType = {
-  text: string;
-  size?: SizeType;
-  textTransform?: TextTransformType;
-  textColor?: ColorType;
-  bgColor?: ColorType;
-  shape?: BoxShapeType;
+type CssStyle = {
+  size?: FontSize;
+  textTransform?: TextTransform;
+  textColor?: Color;
+  bgColor?: Color;
+  shape?: BoxShape;
   rowSpan?: number;
   colSpan?: number;
 };
+
+type Data = {
+  src: string;
+  text: string;
+};
+
+type TextBoxStyle = Pick<
+  CssStyle,
+  'size' | 'textTransform' | 'textColor' | 'bgColor' | 'shape'
+>;
+
+type GridItemStyle = Pick<CssStyle, 'rowSpan' | 'colSpan'>;
+
+type GridImageInfo = Omit<Data & GridItemStyle, 'text'>;
+
+type GridTextInfo = Omit<Data & TextBoxStyle & GridItemStyle, 'src'>;

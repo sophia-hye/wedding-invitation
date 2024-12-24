@@ -1,11 +1,6 @@
 import styled from 'styled-components';
 
-interface GridItemProps {
-  rowSpan?: number;
-  colSpan?: number;
-}
-
-const GridItem = styled.div<GridItemProps>`
+const GridItem = styled.div<GridItemStyle>`
   --rowSpan: ${({ rowSpan }) => (rowSpan ? rowSpan : 1)};
   --colSpan: ${({ colSpan }) => (colSpan ? colSpan : 1)};
 

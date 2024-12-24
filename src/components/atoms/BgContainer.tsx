@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 const BgContainer = styled.div<{
-  bgColor?: ColorType;
-  shape?: BoxShapeType;
+  bgColor?: Color;
+  shape?: BoxShape;
 }>`
   background-color: ${({ bgColor }) => {
     switch (bgColor) {

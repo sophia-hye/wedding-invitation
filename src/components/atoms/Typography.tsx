@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Typography = styled.p<{
-  textColor?: ColorType;
+  textColor?: Color;
 }>`
   ${({ textColor }) => {
     switch (textColor) {

@@ -2,12 +2,7 @@ import styled from 'styled-components';
 import BgContainer from '@/components/atoms/BgContainer';
 import Typography from '@/components/atoms/Typography';
 
-interface TextBoxProps {
-  size?: SizeType;
-  textTransform?: TextTransformType;
-  textColor?: ColorType;
-  bgColor?: ColorType;
-  shape?: BoxShapeType;
+interface TextBoxProps extends TextBoxStyle {
   children: React.ReactNode;
 }
 
@@ -29,8 +24,8 @@ export default function TextBox({
 }
 
 const StyledHeader = styled.div<{
-  size?: SizeType;
-  textTransform?: TextTransformType;
+  size?: FontSize;
+  textTransform?: TextTransform;
 }>`
   font-weight: bold;
 

@@ -1,19 +1,6 @@
 import styled, { css } from 'styled-components';
 
-const getGridLayout = (columns?: number, squareSize?: string) => {
-  if (columns && columns > 0) {
-    return {
-      columns: `repeat(${columns}, 1fr)`,
-      rows: `auto`,
-    };
-  }
-  return {
-    columns: `repeat(auto-fit, minmax(${squareSize}, 1fr))`,
-    rows: `minmax(${squareSize}, auto)`,
-  };
-};
-
-// 미디어 쿼리 설정
+// media query
 const mediaQueries = {
   desktop: (columns?: number) => getGridLayout(columns, '500px'),
   tablet: (columns?: number) => getGridLayout(columns, '300px'),
@@ -57,3 +44,16 @@ const GridContainer = styled.div<{ columns?: number }>`
 `;
 
 export default GridContainer;
+
+function getGridLayout(columns?: number, squareSize?: string) {
+  if (columns && columns > 0) {
+    return {
+      columns: `repeat(${columns}, 1fr)`,
+      rows: `auto`,
+    };
+  }
+  return {
+    columns: `repeat(auto-fit, minmax(${squareSize}, 1fr))`,
+    rows: `minmax(${squareSize}, auto)`,
+  };
+}

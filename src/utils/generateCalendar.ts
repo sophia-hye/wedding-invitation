@@ -1,17 +1,17 @@
 export default function generateCalendarGridInfo(
   year: number,
   month: number
-): GridTextInfoType[] {
+): GridTextInfo[] {
   const { daysOfWeek, days } = getMonthInfo(year, month);
 
-  const daysOfWeekInfo: GridTextInfoType[] = daysOfWeek.map((day) => ({
+  const daysOfWeekInfo: GridTextInfo[] = daysOfWeek.map((day) => ({
     text: day,
     size: 'F18',
     textTransform: 'capitalize',
     textColor: 'Tiffany',
   }));
 
-  const daysInfo: GridTextInfoType[] = days.map((date) => {
+  const daysInfo: GridTextInfo[] = days.map((date) => {
     const isWeddingDay: boolean = Number(date) === 8;
 
     return {

@@ -2,11 +2,7 @@ import GridContainer from '@/components/atoms/GridContainer';
 import GridImageItem from '@/components/molecules/GridImageItem';
 
 interface GridImageProps {
-  imageInfos: {
-    src: string;
-    rowSpan?: number;
-    colSpan?: number;
-  }[];
+  imageInfos: GridImageInfo[];
 }
 
 export default function GridImage({ imageInfos }: GridImageProps) {

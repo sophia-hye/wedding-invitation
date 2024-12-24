@@ -3,7 +3,7 @@ import GridTextItem from '@/components/molecules/GridTextItem';
 
 interface GridTextProps {
   columns: number;
-  textInfos: GridTextInfoType[];
+  textInfos: GridTextInfo[];
 }
 
 export default function GridText({ columns, textInfos }: GridTextProps) {

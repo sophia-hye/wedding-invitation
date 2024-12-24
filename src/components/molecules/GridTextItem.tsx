@@ -1,17 +1,6 @@
 import GridItem from '@/components/atoms/GridItem';
 import TextBox from '@/components/molecules/TextBox';
 
-interface GridTextItemProps {
-  text: string;
-  size?: SizeType;
-  textTransform?: TextTransformType;
-  textColor?: ColorType;
-  bgColor?: ColorType;
-  shape?: BoxShapeType;
-  rowSpan?: number;
-  colSpan?: number;
-}
-
 export default function GridTextItem({
   text,
   size,
@@ -21,7 +10,7 @@ export default function GridTextItem({
   shape,
   rowSpan,
   colSpan,
-}: GridTextItemProps) {
+}: GridTextInfo) {
   return (
     <GridItem rowSpan={rowSpan} colSpan={colSpan}>
       <TextBox

@@ -1,4 +1,3 @@
-import Reeact, { Fragment } from 'react';
 import styled from 'styled-components';
 import formatMessage from '@/utils/formatter';
 import TextBox from '@/components/molecules/TextBox';
@@ -7,13 +6,11 @@ export default function Message() {
   const message = formatMessage();
 
   return (
-    <Fragment>
-      <StyledDiv>
-        {message.map((pharagraph, index) => (
-          <TextBox key={`message-pharagraph-${index}`}>{pharagraph}</TextBox>
-        ))}
-      </StyledDiv>
-    </Fragment>
+    <StyledDiv>
+      {message.map((pharagraph, index) => (
+        <TextBox key={`message-pharagraph-${index}`}>{pharagraph}</TextBox>
+      ))}
+    </StyledDiv>
   );
 }
 
