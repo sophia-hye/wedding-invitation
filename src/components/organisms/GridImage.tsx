@@ -1,7 +1,7 @@
-import GridContainer from '../atoms/GridContainer';
-import GridImageItem from './GridImageItem';
+import GridContainer from '@/components/atoms/GridContainer';
+import GridImageItem from '@/components/molecules/GridImageItem';
 
-interface ResponsiveGridProps {
+interface GridImageProps {
   imageInfos: {
     src: string;
     rowSpan?: number;
@@ -9,12 +9,7 @@ interface ResponsiveGridProps {
   }[];
 }
 
-
-
-
-
-
-export default function ResponsiveGrid({ imageInfos }: ResponsiveGridProps) {
+export default function GridImage({ imageInfos }: GridImageProps) {
   return (
     <GridContainer>
       {imageInfos.map((info, index) => (

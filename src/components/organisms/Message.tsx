@@ -1,17 +1,16 @@
-import { Fragment } from 'react';
+import Reeact, { Fragment } from 'react';
 import styled from 'styled-components';
-import Paragraph from '../molecules/Paragraph';
 import formatMessage from '@/utils/formatter';
+import TextBox from '@/components/molecules/TextBox';
 
 export default function Message() {
   const message = formatMessage();
+
   return (
     <Fragment>
       <StyledDiv>
         {message.map((pharagraph, index) => (
-          <div key={`message-pharagraph-${index}`} className="">
-            <Paragraph type={'Default'}>{pharagraph}</Paragraph>
-          </div>
+          <TextBox key={`message-pharagraph-${index}`}>{pharagraph}</TextBox>
         ))}
       </StyledDiv>
     </Fragment>

@@ -1,13 +1,13 @@
-import MESSAGE from '@/constants/ko/message';
+import MESSAGES from '@/constants/ko/messages';
 
 const formatMessage = (maxLength: number = 20) => {
-  const sentences = MESSAGE.Text.replace(/\.\s+/, '.').split(/\./g);
-  const messages = sentences.map(sentence => {
+  const sentences = MESSAGES.Text.replace(/\.\s+/, '.').split(/\./g);
+  const messages = sentences.map((sentence) => {
     if (sentence.length <= maxLength) return sentence;
 
     const lines = sentence.replace(/,/, ',\n').split(/\n/g);
     const newLines: string[] = [];
-    lines.forEach(line => {
+    lines.forEach((line) => {
       if (line.length <= maxLength) {
         newLines.push(line);
       } else {

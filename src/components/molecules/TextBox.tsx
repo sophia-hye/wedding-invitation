@@ -1,12 +1,13 @@
 import styled from 'styled-components';
-import BgContainer from '../atoms/BgContainer';
-import Typography from '../atoms/Typography';
+import BgContainer from '@/components/atoms/BgContainer';
+import Typography from '@/components/atoms/Typography';
 
 interface TextBoxProps {
   size?: SizeType;
   textTransform?: TextTransformType;
   textColor?: ColorType;
   bgColor?: ColorType;
+  shape?: BoxShapeType;
   children: React.ReactNode;
 }
 
@@ -15,11 +16,12 @@ export default function TextBox({
   textTransform,
   textColor,
   bgColor,
+  shape,
   children,
 }: TextBoxProps) {
   return (
     <StyledHeader size={size} textTransform={textTransform}>
-      <BgContainer bgColor={bgColor}>
+      <BgContainer bgColor={bgColor} shape={shape}>
         <Typography textColor={textColor}>{children}</Typography>
       </BgContainer>
     </StyledHeader>

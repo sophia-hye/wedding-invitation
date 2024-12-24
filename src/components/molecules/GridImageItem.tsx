@@ -1,5 +1,5 @@
-import GridItem from '../atoms/GridItem';
-import ResponsiveImage from '../atoms/ResponsiveImage';
+import GridItem from '@/components/atoms/GridItem';
+import ResponsiveImage from '@/components/atoms/ResponsiveImage';
 
 interface GridImageItemProps {
   src: string;
