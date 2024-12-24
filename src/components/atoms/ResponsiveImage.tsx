@@ -23,5 +23,5 @@ export default function ResponsiveImage({ imagePath }: ResponsiveImageProps) {
         alt={imagePath}
       />
     </Fragment>
-  )
+  );
 }

@@ -1,20 +1,22 @@
 import styled from 'styled-components';
 
-type ParagraphyType = 'Default' | 'CreamBg' | 'TiffanyBg';
-
-const Typography = styled.p<{ type: ParagraphyType }>`
-  ${({ type }) => {
-    switch (type) {
-      case 'CreamBg':
+const Typography = styled.p<{
+  textColor?: ColorType;
+}>`
+  ${({ textColor }) => {
+    switch (textColor) {
+      case 'Cream':
         return `
-          background-color: var(--creamWhite);
-          color: var(--charcoalGray);
+          color: var(--creamWhite);
         `;
-      case 'TiffanyBg':
+      case 'Tiffany':
         return `
-          background-color: var(--tiffanyBlue);
-          color: var(--charcoalGray);
+          color: var(--tiffanyBlue);
         `;
+      case 'Charcoal':
+        return `
+            color: var(--charcoalGray)
+          `;
       default:
         return `
         `;

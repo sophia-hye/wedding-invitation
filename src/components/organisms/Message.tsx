@@ -20,7 +20,7 @@ export default function Message() {
 
 const StyledDiv = styled.div`
   display: flex;
-  display-direction: column;
+  flex-direction: column;
   gap: 24px;
   width: 50vw;
   text-align: center;
