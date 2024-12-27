@@ -1,6 +1,6 @@
 const COVER = {
   Title: 'We are married',
-  BgImagePath: '', // cover.png
+  BgImagePath: 'cover.jpg',
 };
 
 export default COVER;
